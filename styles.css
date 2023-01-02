@@ -192,9 +192,6 @@ main>* {
 }
 
 @media (max-width:560px) {
-    body {
-        /* overflow-y: scroll; */
-    }
     .body-bg-bottom {
         display: none;
     }
