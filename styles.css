@@ -23,7 +23,7 @@ body {
     height: 100vh;
     position: relative;
     /* padding: 70px 0; */
-    overflow: hidden;
+    overflow-x: hidden;
     font-size: 15px;
 }
 
