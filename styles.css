@@ -14,6 +14,7 @@
     list-style-type: none;
     outline: none;
     transition: .5s ease-in-out;
+    overflow-x: hidden;
 }
 
 body {
@@ -23,7 +24,6 @@ body {
     height: 100vh;
     position: relative;
     /* padding: 70px 0; */
-    overflow-x: hidden;
     font-size: 15px;
 }
 
@@ -193,7 +193,7 @@ main>* {
 
 @media (max-width:560px) {
     body {
-        overflow-y: scroll;
+        /* overflow-y: scroll; */
     }
     .body-bg-bottom {
         display: none;
