@@ -1,0 +1,223 @@
+:root {
+    --Very-Light-Grayish-Blue: hsl(240, 78%, 98%);
+    --Light-Grayish-Blue: hsl(234, 14%, 74%);
+    --Grayish-Blue: hsl(233, 13%, 49%);
+    --Dark-Grayish-Blue: hsl(232, 13%, 33%);
+    --lineargradient: linear-gradient(to right, hsl(236, 72%, 79%), hsl(237, 63%, 64%));
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    list-style-type: none;
+    outline: none;
+    transition: .5s ease-in-out;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--Very-Light-Grayish-Blue);
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    /* padding: 70px 0; */
+    overflow: hidden;
+    font-size: 15px;
+}
+
+.body-bg-top {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.body-bg-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.selector {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    font-weight: 700;
+    color: var(--Grayish-Blue);
+}
+
+.mode {
+    position: relative;
+    background-color: hsl(237, 63%, 64%);
+    width: 60px;
+    height: 30px;
+    border-radius: 50px;
+}
+
+.mode .span {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+}
+
+h1 {
+    font-weight: 700;
+    margin-top: 70px;
+}
+
+.mode:hover {
+    background: var(--lineargradient);
+}
+
+.monthly .span {
+    right: 5px;
+    left: unset;
+}
+
+main {
+    position: relative;
+    z-index: 10;
+    /* margin-top: 50px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60%;
+    margin: 50px auto;
+}
+
+main>* {
+    width: 33.3%;
+}
+
+.white-bg {
+    background-color: white;
+    color: var(--Dark-Grayish-Blue);
+}
+
+.white-bg:first-of-type {
+    border-bottom-left-radius: 10px;
+    border-top-left-radius: 10px;
+}
+
+.white-bg:last-of-type {
+    border-bottom-right-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.blue-bg {
+    background: var(--lineargradient);
+    padding: 20px 0;
+    color: white;
+    border-radius: 10px;
+}
+
+.container {
+    height: 350px;
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.price {
+    font-size: 56px;
+    font-weight: 700;
+}
+
+.prop {
+    font-weight: 600;
+    padding: 15px 0;
+    border-top: 1px solid var(--Light-Grayish-Blue);
+    /*  */
+}
+
+.prop:last-of-type {
+    border-bottom: 1px solid var(--Light-Grayish-Blue);
+}
+
+.btn {
+    cursor: pointer;
+    width: 100%;
+    background-color: hsl(228, 45%, 44%);
+    padding: 10px 0;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 12px;
+    color: white;
+    font-weight: 800;
+}
+
+.blue-bg .btn {
+    color: hsl(237, 63%, 64%);
+    background-color: white;
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: hsl(237, 63%, 64%);
+    border: 2px solid var(--Light-Grayish-Blue);
+}
+
+.blue-bg .btn:hover {
+    color: inherit;
+}
+
+.monthly-price {
+    display: none;
+}
+
+.monthly .monthly-price {
+    display: block;
+}
+
+.monthly .annual-price {
+    display: none;
+}
+
+@media (max-width:560px) {
+    .body-bg-bottom {
+        display: none;
+    }
+    .body-bg-top {
+        right: -50%;
+    }
+    main {
+        width: 100%;
+        flex-direction: column;
+        gap: 20px;
+    }
+    main>* {
+        width: 90%;
+        margin: auto;
+        border-radius: 15px;
+    }
+    .blue-bg {
+        padding: 0;
+    }
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
